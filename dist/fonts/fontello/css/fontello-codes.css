@@ -1,0 +1,7 @@
+
+.icon-ok-circle:before { content: '\e800'; } /* '' */
+.icon-ok:before { content: '\e801'; } /* '' */
+.icon-desktop:before { content: '\e802'; } /* '' */
+.icon-cancel:before { content: '\e803'; } /* '' */
+.icon-location:before { content: '\e804'; } /* '' */
+.icon-up-open-big:before { content: '\e805'; } /* '' */

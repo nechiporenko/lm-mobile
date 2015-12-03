@@ -1,0 +1,221 @@
+@import "base";
+html,
+button,
+input,
+select,
+textarea {
+    color: $text-color;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Base Styles */
+.page{
+    line-height:strip-units($project-line-height/$project-font-size);
+    font-family: Roboto, Arial, "Helvetica CY", "Nimbus Sans L", sans-serif;
+    color: $text-color;
+}
+
+/* Typography*/
+h1, h2, h3, h4, h5, h6, .g-title{
+  margin-top: 0;
+  margin-bottom:rem(12px);
+  line-height:strip-units($project-line-height/20);
+  color:$title-color;
+  font-weight:500;
+}
+.g-title{
+    display:block;
+    margin-bottom:rem(8px);
+    @include font-size(24px);
+    text-align:center;
+    color:$primary;
+}
+.g-subtitle{
+    margin-bottom:rem(24px);
+    @include font-size(14px);
+    text-transform:uppercase;
+    text-align:center;
+    color:$primary-light;
+    line-height:strip-units($project-line-height/20);
+}
+
+.g-brand-color{
+    color:$primary;
+}
+
+/* Links */
+a {
+  color: $primary; }
+
+
+/* Lists */
+ul {
+    list-style: disc outside; }
+ol {
+    list-style: decimal outside; }
+ol, ul {
+    margin-top: 0; }
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+    margin:rem($project-line-height/2) 0 rem($project-line-height/2) rem(30px);
+}
+
+.g-clearlist{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+}
+
+.g-styled-ol-list{
+    margin:$project-line-height 0;
+    padding-left:rem(30px);
+    counter-reset:li;
+
+    li{
+        position:relative;
+        list-style:none;
+
+        &:before{
+            content:counter(li);
+            counter-increment:li;
+            display:block;
+            width:rem(18px);
+            height:rem(18px);
+            line-height:rem(20px);
+            text-align:center;
+            border-radius:50%;
+            background:$primary;
+            color:#fff;
+            @include font-size(11px);
+            position:absolute;
+            top:rem(2px);
+            left:rem(-30px);
+        }
+    }
+}
+
+.g-styled-list{
+    list-style-type:none;
+    padding:0;
+    margin:$project-line-height 0;
+    li{
+        &:before{
+            content:'\e800';
+            font-family:'fontello';
+            margin-right:rem(14px);
+            color:$primary;
+        }
+    }
+}
+
+/* Blockquote */
+blockquote{
+    font-size:120%;
+    line-height:1.6;
+    font-style: italic;
+    @include px2rem(padding, 0 0 0 30px);
+    border-left:2px solid $primary;
+}
+cite{
+    display:block;
+    font-size:75%;
+}
+
+
+
+/* Spacing */
+p {
+  margin-top: 0; }
+
+button,
+.g-btn {
+    margin-bottom:rem($project-line-height/2);
+}
+input,
+textarea,
+select,
+fieldset {
+    margin-bottom:rem($project-line-height/2);
+}
+
+pre,
+blockquote,
+dl,
+figure,
+table,
+p,
+ul,
+ol{
+    margin-bottom:rem($project-line-height);
+}
+
+/* Misc */
+hr {
+    margin:rem($project-line-height) 0;
+    border-width: 0;
+    border-top: 1px solid $border-color;
+}
+
+/* Transitions */
+a, button, input[type="button"], input[type="submit"],
+#{$all-text-inputs}, select{
+    @include transition-property(border-color,color,background-color);
+    @include transition-duration(.15s);
+    @include transition-timing-function(ease-in);
+}
+
+
+/*Helper classes*/
+.g-hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.g-visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.g-invisible {
+    visibility: hidden;
+}
+
+.g-clearfix{
+    @include clearfix; //bourbon clearfix
+}
+

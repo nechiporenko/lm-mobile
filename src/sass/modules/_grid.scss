@@ -1,0 +1,116 @@
+﻿@import "base";
+/* Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.g-container {
+    @include outer-container();
+    @include px2rem(padding, 0 10px);
+    box-sizing:border-box;
+}
+
+.g-row{
+    @include row();  
+}
+
+
+
+/*Grid*/
+.g-col{
+  width: 100%;
+  float: left;
+  box-sizing: border-box;
+  min-height:0.01%;
+
+  @include media($tablet){
+      margin-left:$grid-gutter;
+      &:first-child{
+          margin-left:0;
+      }    
+  }
+}
+
+.g-col--xs{
+    margin-left:$grid-gutter;
+    &:first-child{
+        margin-left:0;
+    }
+}
+
+.g-col--one-half.g-col--xs{
+    width:(100%-$grid-gutter)/2;
+}
+    
+.g-col--one-third.g-col--xs{
+    width:(100%-$grid-gutter*2)/3;
+}
+.g-col--one-third-center.g-col--xs{
+    width:(100%-$grid-gutter*2)/3;
+    margin-left:(100%-$grid-gutter*2)/3 + $grid-gutter !important;
+}
+.g-col--two-thirds.g-col--xs{
+    width: 2*(100%-$grid-gutter*2)/3 + $grid-gutter;
+}
+.g-col--one-fourth.g-col--xs{
+    width:(100% - $grid-gutter*3)/4;
+}
+
+
+@include media($tablet){
+    .g-col--one-half{
+        width:(100%-$grid-gutter)/2;
+    }
+    .g-col--one-half-center{
+        float:none;
+        margin-left:auto !important;
+        margin-right:auto;
+    }
+    .g-col--one-third{
+        width:(100%-$grid-gutter*2)/3;
+    }
+    .g-col--one-third-center{
+        width:(100%-$grid-gutter*2)/3;
+        margin-left:(100%-$grid-gutter*2)/3 + $grid-gutter !important;
+    }
+    .g-col--two-thirds{
+        width: 2*(100%-$grid-gutter*2)/3 + $grid-gutter;
+    }
+    .g-col--one-fourth{
+        width:(100% - $grid-gutter*3)/4;
+    }
+}
+
+/*Page Sections*/
+.page__section{
+    padding:rem(24px) 0;
+    background:#fff;
+}
+.page__section--alt{
+    background:#fafafa;
+    border-bottom:1px solid $border-color;
+}
+
+
+/*Table-grid*/
+.g-as-table{
+    @extend .g-clearfix;
+    @include media($tablet){
+        display:table;
+        width:100%;
+        table-layout:fixed;
+    }
+}
+.g-as-cell{
+    box-sizing:border-box;
+
+    @include media($tablet){
+        display:table-cell;
+        width:50%;
+        vertical-align:middle;
+
+        &:first-child{
+            padding-right:$grid-gutter/2;
+        }
+        &:last-child{
+            padding-left:$grid-gutter/2;
+        }
+    }
+}

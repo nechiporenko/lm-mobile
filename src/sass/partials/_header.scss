@@ -1,0 +1,74 @@
+@import "../modules/base";
+
+/*Site Header Start*/
+.header{
+   padding-top:rem(26px);
+}
+
+.header__menu{
+    position:fixed;
+    top:0; left:0;
+    z-index:500;
+    width:100%;
+    background:#fff;
+    border-bottom:1px solid $border-color;
+    box-shadow:0 2px 4px rgba(#000, .3);
+}
+.header__content{
+    padding-top:rem(12px);
+    border-bottom:1px solid $border-color;
+}
+
+/*Site Logo*/
+.logo{
+    display:block;
+    width:rem(140px);
+    height:rem(42px);
+    @include hide-text;
+    background-image:url(../img/logo.png);
+    background-position:left center;
+    background-repeat:no-repeat;
+    background-size:100% 100%;
+
+    @include hidpi(1.5){
+        background-image:url(../img/logo_2x.png);        
+    }
+
+    @include media($mobile){
+        margin-bottom:rem(6px);
+        width:rem(170px);
+        height:rem(51px);
+        background-image:url(../img/logo_2x.png);
+    }
+}
+.logo__title{
+    display:block;
+    line-height:1.2;
+    @include font-size(10px);
+}
+.logo__subtitle{
+    display:inline-block;
+    line-height:1.1;
+    @include font-size(12px);
+    letter-spacing:rem(.6px);
+    color:$primary;
+}
+
+/*Callback Link*/
+.call-link{
+    display:block;
+    height:rem(42px);
+    line-height:rem(46px);
+    white-space:nowrap;
+    text-align:right;
+    text-decoration:none;
+    color:#000;
+    font-weight:700;
+    letter-spacing:rem(.6px);
+
+    @include media($mobile){
+        height:rem(51px);
+        line-height:rem(56px);
+    }
+}
+/*Site Header End*/

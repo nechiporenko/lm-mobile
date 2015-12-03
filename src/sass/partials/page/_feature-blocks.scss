@@ -1,0 +1,43 @@
+﻿@import "../../modules/_base.scss";
+/*Features Blocks Start*/
+.b-feature{
+    list-style-type:none;
+    padding:0; margin:0;
+    @include clearfix;
+}
+.b-feature__item{
+    float:left;
+    width:100%;
+
+    @include media($mobile){
+        @include span-columns(6);
+        @include omega(2n);
+    }
+    @include media($tablet){
+        @include span-columns(4);
+        @include omega-reset(2n);
+        @include omega(3n);
+    }
+}
+
+.b-feature__block{
+    margin-bottom:rem(24);
+    padding:0;
+    text-align:center;
+}
+.b-feature__thumb{
+    width:100%;
+    max-width:rem(250px);
+    margin:0 auto rem(8px);
+    border:1px solid $border-color;
+    border-radius:rem($border-radius);
+    overflow:hidden;
+}
+.b-feature__img{
+    max-width: 100%;
+    box-sizing: border-box;
+}
+.b-feature__title{
+    line-height:1.2;
+}
+/*Features Blocks End*/

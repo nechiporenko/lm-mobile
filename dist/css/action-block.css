@@ -1,0 +1,30 @@
+﻿/*Action Block Start*/
+.b-action {
+  padding: 1.5rem 0;
+  background-color: #0aaca9;
+  background-image: -webkit-linear-gradient(top, #0aaca9, #20c38a);
+  background-image: linear-gradient(to bottom,#0aaca9, #20c38a);
+  color: #fff; }
+
+.b-action__form {
+  padding: 1.5rem 0.625rem;
+  border: 1px solid #fff;
+  border-radius: 1.25rem;
+  background-color: #0aaca9;
+  background-image: -webkit-linear-gradient(top, #0aaca9, #20c38a);
+  background-image: linear-gradient(to bottom,#0aaca9, #20c38a); }
+  .b-action__form .g-styled-btn {
+    margin: 0; }
+
+.b-action__title {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.1;
+  font-weight: 500; }
+
+.b-action__subtitle {
+  margin-bottom: 0.75rem; }
+
+/*Action Block End*/

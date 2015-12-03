@@ -25,20 +25,20 @@
     width:rem(140px);
     height:rem(42px);
     @include hide-text;
-    background-image:url(../img/logo.png);
+    background-image:url(../img_common/logo.png);
     background-position:left center;
     background-repeat:no-repeat;
     background-size:100% 100%;
 
     @include hidpi(1.5){
-        background-image:url(../img/logo_2x.png);        
+        background-image:url(../img_common/logo_2x.png);        
     }
 
     @include media($mobile){
         margin-bottom:rem(6px);
         width:rem(170px);
         height:rem(51px);
-        background-image:url(../img/logo_2x.png);
+        background-image:url(../img_common/logo_2x.png);
     }
 }
 .logo__title{

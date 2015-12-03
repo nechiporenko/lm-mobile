@@ -1,4 +1,4 @@
-﻿/*Features Blocks Start*/
+﻿/*---БЛОК "КОМУ РЕКОМЕНДУЕТСЯ"*/
 .b-feature {
   list-style-type: none;
   padding: 0;
@@ -60,4 +60,4 @@
 .b-feature__title {
   line-height: 1.2; }
 
-/*Features Blocks End*/
+/*---/БЛОК "КОМУ РЕКОМЕНДУЕТСЯ"*/

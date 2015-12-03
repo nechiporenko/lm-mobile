@@ -13,6 +13,7 @@
     <link href="css_common/menu.css" rel="stylesheet" />
     <link href="css/action-block.css" rel="stylesheet" />
     <link href="css/features-block.css" rel="stylesheet" />
+    <link href="css_common/promo.css" rel="stylesheet" />
 </head>
 <body class="page">
     <!--ФИКСИРОВАННЫЙ ХИДЕР-->
@@ -40,19 +41,19 @@
                 <!--/БЛОК МЕНЮ-->
             </nav>
         </div><!--/header__menu-->
-    <div class="header__content">
-        <div class="g-container">
-            <div class="g-col g-col--one-half g-col--xs">
-                <a href="/" class="logo">Лактомарин</a>
-                <span class="logo__title">Гель из бурых морских водорослей</span>
-                <span class="logo__subtitle">100% натуральный продукт</span>
-            </div><!--/g-col-->
-            <div class="g-col g-col--one-half g-col--xs g-text-right">
-                <a href="tel:+77272221144" class="call-link">+7 727 222 11 44</a>
-                <button type="button" class="g-btn" data-modal="#callback">Бесплатный звонок</button>
-            </div><!--/g-col-->
-        </div><!--/g-container-->
-    </div><!--/header__content-->
+        <div class="header__content">
+            <div class="g-container">
+                <div class="g-col g-col--one-half g-col--xs">
+                    <a href="/" class="logo">Лактомарин</a>
+                    <span class="logo__title">Гель из бурых морских водорослей</span>
+                    <span class="logo__subtitle">100% натуральный продукт</span>
+                </div><!--/g-col-->
+                <div class="g-col g-col--one-half g-col--xs g-text-right">
+                    <a href="tel:+77272221144" class="call-link">+7 727 222 11 44</a>
+                    <button type="button" class="g-btn" data-modal="#callback">Бесплатный звонок</button>
+                </div><!--/g-col-->
+            </div><!--/g-container-->
+        </div><!--/header__content-->
     </header>
     <!--/ФИКСИРОВАННЫЙ ХИДЕР-->
 
@@ -85,7 +86,7 @@
         </div><!--/page__section-->
         <!--/ГЕЛЬ ЛАКТОМАРИН-->
     </div><!--/#section1-->
-    
+
     <div id="section2">
         <!--ГЕЛЬ ЛАКТОМАРИН ДЛЯ ИММУНИТЕТА-->
         <div class="page__section">
@@ -115,7 +116,6 @@
             </article><!--/g-container-->
         </div><!--/page__section-->
         <!--/ГЕЛЬ ЛАКТОМАРИН ДЛЯ ИММУНИТЕТА-->
-
         <!--БЛОК УСПЕЙТЕ ЗАКАЗАТЬ СО СКИДКОЙ-->
         <div class="b-action">
             <div class="g-container">
@@ -132,14 +132,13 @@
                 </div><!--/g-col-->
             </div><!--/g-container-->
         </div><!--/b-action-->
-        <!--/БЛОК УСПЕЙТЕ ЗАКАЗАТЬ СО СКИДКОЙ-->    
-
+        <!--/БЛОК УСПЕЙТЕ ЗАКАЗАТЬ СО СКИДКОЙ-->
         <!--БЛОК "КОМУ РЕКОМЕНДУЕТСЯ"-->
         <div class="page__section page__section--alt">
             <article class="g-container">
                 <header>
                     <h3 class="g-title">Кому особенно рекомендуется употреблять Лактомарин</h3>
-                    <p class="g-subtitle">Выделяют такие "группы риска", которые чаще других страдают от витаминной недостаточности</p>                    
+                    <p class="g-subtitle">Выделяют такие "группы риска", которые чаще других страдают от витаминной недостаточности</p>
                 </header>
                 <ul class="b-feature">
                     <li class="b-feature__item">
@@ -232,10 +231,57 @@
         <!--/БЛОК "КОМУ РЕКОМЕНДУЕТСЯ"-->
     </div><!--/#section2-->
 
-    <div id="section3"></div><!--/#section3-->
+    <div id="section3">
+        <!--БЛОК "АКЦИЯ"-->
+        <div class="b-promo">
+            <div class="g-container">
+                <span class="b-promo__title">
+                    До завершения акции:
+                </span>
+                <ul class="countdown js-countdown" data-timer="01/01/2016">
+                    <li class="countdown__item">
+                        <div class="countdown__inner">
+                            <span class="countdown__num countdown__num--day">00</span>
+                        </div>
+                        <span class="countdown__title">дней</span>
+                    </li>
+                    <li class="countdown__item">
+                        <div class="countdown__inner">
+                            <span class="countdown__num countdown__num--hour">00</span>
+                        </div>
+                        <span class="countdown__title">часов</span>
+                    </li>
+                    <li class="countdown__item">
+                        <div class="countdown__inner">
+                            <span class="countdown__num countdown__num--min">00</span>
+                        </div>
+                        <span class="countdown__title">минут</span>
+                    </li>
+                    <li class="countdown__item">
+                        <div class="countdown__inner">
+                            <span class="countdown__num countdown__num--sec">00</span>
+                        </div>
+                        <span class="countdown__title">секунд</span>
+                    </li>
+                </ul>                
+                <span class="b-promo__subtitle">
+                    Успейте заказать Лактомарин<br />
+                    со скидкой 20%<br />
+                    прямо сейчас!
+                </span>
+                <p>
+                    <button type="button" class="g-styled-btn b-promo__btn">Отправить заявку</button>
+                </p>
+                <p>или получите консультацию по телефону</p>
+                <a href="tel:+77272221144" class="b-promo__tel">+ 7 727 222 11 44</a>
+            </div><!--/g-container-->
+        </div><!--/b-promo-->
+        <!--/БЛОК "АКЦИЯ"-->
+    </div><!--/#section3-->
+
+
     <div id="section4"></div><!--/#section4-->
     <div id="section5"></div><!--/#section5-->
-
     <!--МОДАЛЬНОЕ ОКНО КОЛЛБЭК-->
     <div class="modal" id="callback">
         <form class="modal__content">

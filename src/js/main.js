@@ -5,6 +5,7 @@
 // Модальное окно
 // Ф-ция скролла к началу элеметна
 // Кнопка скролла страницы
+// Таймер обратного отсчета
 
 jQuery(document).ready(function ($) {
     //Кэшируем
@@ -156,5 +157,55 @@ jQuery(document).ready(function ($) {
             return false;
         });
     }());
-    
+
+
+    //
+    // Таймер обратного отсчета
+    //---------------------------------------------------------------------------------------
+    function initTimer() {
+        var $counter = $('.js-countdown'),
+            deadline = $counter.data('timer'),
+            $days = $counter.find('.countdown__num--day'),
+            $hours = $counter.find('.countdown__num--hour'),
+            $minutes = $counter.find('.countdown__num--min'),
+            $seconds = $counter.find('.countdown__num--sec');
+
+        function getTimeRemaining(endtime) {
+            var t = Date.parse(endtime) - Date.parse(new Date()),
+                seconds = Math.floor((t / 1000) % 60),
+                minutes = Math.floor((t / 1000 / 60) % 60),
+                hours = Math.floor((t / (1000 * 60 * 60)) % 24),
+                days = Math.floor(t / (1000 * 60 * 60 * 24));
+            if (seconds < 10 || seconds == 0) { seconds = '0' + seconds };
+            if (minutes < 10 || minutes == 0) { minutes = '0' + minutes };
+            if (hours < 10 || hours == 0) { hours = '0' + hours };
+            
+            return {
+                'total': t,
+                'days': days,
+                'hours': hours,
+                'minutes': minutes,
+                'seconds': seconds
+            };
+        }
+
+        function initializeTimer(endtime) {
+            var timeinterval = setInterval(function () {
+                var t = getTimeRemaining(endtime);
+                $days.text(t.days);
+                $hours.text(t.hours);
+                $minutes.text(t.minutes);
+                $seconds.text(t.seconds);
+
+                if (t.total <= 0) {
+                    clearInterval(timeinterval);
+                }
+            }, 1000);
+        }
+
+        initializeTimer(deadline);
+    }
+
+    if ($('.js-countdown').length) { initTimer();}
+
 });

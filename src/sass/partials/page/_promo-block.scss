@@ -1,0 +1,90 @@
+﻿@import "../../modules/_base.scss";
+/*---БЛОК "АКЦИЯ"*/
+.b-promo{
+    padding:rem(24px) 0;
+    @include linear-gradient(to bottom, $primary, $primary-light);
+    color:#fff;
+    text-align:center;
+}
+.b-promo__title{
+    display:block;
+    margin-bottom:rem(24px);
+    @include font-size(32px);
+    line-height:1.1;
+    font-weight:500;
+}
+
+.b-promo__subtitle{
+    display:block;
+    margin-bottom:rem(24px);
+    @include font-size(24px);
+    line-height:1.1;
+}
+
+.b-promo__tel{
+    color:#fff;
+    text-decoration:none;
+    font-weight:bold;
+    @include font-size(32px);
+    letter-spacing:rem(-1.5px);
+    white-space:nowrap;
+
+    &:hover,
+    &:active{
+        color:$primary-alt;
+    }
+}
+.b-promo__btn{
+    min-width:rem(234px);
+}
+
+
+.countdown{
+    width:100%;
+    max-width:rem(220);
+    list-style-type:none;
+    padding:0;
+    margin:0 auto rem(24px);
+    font-size:0;
+}
+
+.countdown__item{
+    display:inline-block;
+    width:25%;
+    padding:0 rem(10px);
+    box-sizing:border-box;
+    @include font-size(24px);
+    text-align:center;
+}
+.countdown__inner{
+    height:rem(50px);
+    background:#bbb;
+    line-height:rem(50px);
+    white-space:nowrap;
+    position:relative;
+    z-index:1;
+
+    &:before{
+        content:'';
+        display:block;
+        height:rem(25px);
+        position:absolute;
+        left:0; top:0;
+        width:100%;
+        background:#fff;
+        z-index:-1;
+    }
+}
+.countdown__num{
+    font-weight:bold;
+    letter-spacing:rem(-1px);
+    color:#000;
+}
+
+.countdown__num--sec{
+    color:#c10458;
+}
+.countdown__title{
+    @include font-size(11px);
+}
+/*---/БЛОК "АКЦИЯ"*/

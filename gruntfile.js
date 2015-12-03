@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 				tasks: ['sass:dist']
 			},
 			livereload: {
-				files: ['dist/*.html', 'src/js/*.js', 'dist/css/*.css','dist/img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
+				files: ['dist/*.html', 'src/js/*.js', 'dist/css_common/*.css','dist/img/**/*.{png,jpg,jpeg,gif,webp,svg}'],
 				options: {
 					livereload: true
 				}

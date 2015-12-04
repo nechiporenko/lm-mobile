@@ -27,29 +27,30 @@ jQuery(document).ready(function ($) {
     var initMenu = (function () {
         var $pageMenu = $('.menu'),
             pageMenuHeight = 26,
-            $menuItems = $pageMenu.find('a'),
-            scrollItems = $menuItems.map(function () {
-                var item = $($(this).attr('href'));
-                if (item.length) { return item; }
-            });
-
-        $window.on('scroll', function () {
-            var fromTop = $(this).scrollTop() + pageMenuHeight + 5,
-                cur = scrollItems.map(function () {
-                    if ($(this).offset().top < fromTop)
-                        return this;
-                });
-            cur = cur[cur.length - 1];
-            var id = cur && cur.length ? cur[0].id : '';
-
-            $menuItems.parent().removeClass('active').end().filter('[href=#' + id + ']').parent().addClass('active');
-        });
+            $menuItems = $pageMenu.find('a');
 
         $pageMenu.on('click', 'a', function (e) {
             e.preventDefault();
             var link = $(this).attr('href');
             smoothScroll($(link));
         });
+
+        //var scrollItems = $menuItems.map(function () {
+        //    var item = $($(this).attr('href'));
+        //    if (item.length) { return item; }
+        //});
+
+        //$window.on('scroll', function () {
+        //    var fromTop = $(this).scrollTop() + pageMenuHeight + 5,
+        //        cur = scrollItems.map(function () {
+        //            if ($(this).offset().top < fromTop)
+        //                return this;
+        //        });
+        //    cur = cur[cur.length - 1];
+        //    var id = cur && cur.length ? cur[0].id : '';
+
+        //    $menuItems.parent().removeClass('active').end().filter('[href=#' + id + ']').parent().addClass('active');
+        //});
     })();
         
 
@@ -134,7 +135,7 @@ jQuery(document).ready(function ($) {
         }
         var topOffset = 26 + offset; //26 - высота хидера
         
-        $('html, body').animate({//после загрузки, промотаем к началу новых блоков
+        $('html, body').animate({
             scrollTop: el.offset().top - topOffset
         }, 800);
     }
@@ -176,9 +177,11 @@ jQuery(document).ready(function ($) {
                 minutes = Math.floor((t / 1000 / 60) % 60),
                 hours = Math.floor((t / (1000 * 60 * 60)) % 24),
                 days = Math.floor(t / (1000 * 60 * 60 * 24));
-            if (seconds < 10 || seconds == 0) { seconds = '0' + seconds };
-            if (minutes < 10 || minutes == 0) { minutes = '0' + minutes };
-            if (hours < 10 || hours == 0) { hours = '0' + hours };
+            if (days > 99) { days = 99 };
+            if (days < 10) { days = '0' + days };
+            if (seconds < 10) { seconds = '0' + seconds };
+            if (minutes < 10) { minutes = '0' + minutes };
+            if (hours < 10) { hours = '0' + hours };
             
             return {
                 'total': t,
@@ -192,13 +195,22 @@ jQuery(document).ready(function ($) {
         function initializeTimer(endtime) {
             var timeinterval = setInterval(function () {
                 var t = getTimeRemaining(endtime);
-                $days.text(t.days);
-                $hours.text(t.hours);
-                $minutes.text(t.minutes);
-                $seconds.text(t.seconds);
+                console.log(t.total);
+                if (t.total > 0) {
+                    $days.text(t.days);
+                    $hours.text(t.hours);
+                    $minutes.text(t.minutes);
+                    $seconds.text(t.seconds);
+                }
+                
 
                 if (t.total <= 0) {
                     clearInterval(timeinterval);
+                    var zero = '00';
+                    $days.text(zero);
+                    $hours.text(zero);
+                    $minutes.text(zero);
+                    $seconds.text(zero);
                 }
             }, 1000);
         }

@@ -58,8 +58,8 @@ h1, h2, h3, h4, h5, h6, .g-title{
 }
 .g-subtitle{
     margin-bottom:rem(24px);
-    @include font-size(14px);
-    text-transform:uppercase;
+    @include font-size(18px);
+    //text-transform:uppercase;
     text-align:center;
     color:$primary-light;
     line-height:strip-units($project-line-height/20);
@@ -73,6 +73,15 @@ h1, h2, h3, h4, h5, h6, .g-title{
 a {
   color: $primary; }
 
+.g-link-unstyled{
+    color:$text-color;
+    text-decoration:none;
+
+    &:hover,
+    &:active{
+        color:$primary;
+    }
+}
 
 /* Lists */
 ul {
@@ -136,20 +145,6 @@ ol ul {
         }
     }
 }
-
-/* Blockquote */
-blockquote{
-    font-size:120%;
-    line-height:1.6;
-    font-style: italic;
-    @include px2rem(padding, 0 0 0 30px);
-    border-left:2px solid $primary;
-}
-cite{
-    display:block;
-    font-size:75%;
-}
-
 
 
 /* Spacing */

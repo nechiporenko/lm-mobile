@@ -367,9 +367,8 @@ h1, h2, h3, h4, h5, h6, .g-title {
 
 .g-subtitle {
   margin-bottom: 1.5rem;
-  font-size: 14px;
-  font-size: 0.875rem;
-  text-transform: uppercase;
+  font-size: 18px;
+  font-size: 1.125rem;
   text-align: center;
   color: #20c38a;
   line-height: 1.2; }
@@ -380,6 +379,12 @@ h1, h2, h3, h4, h5, h6, .g-title {
 /* Links */
 a {
   color: #0aaca9; }
+
+.g-link-unstyled {
+  color: #727272;
+  text-decoration: none; }
+  .g-link-unstyled:hover, .g-link-unstyled:active {
+    color: #0aaca9; }
 
 /* Lists */
 ul {
@@ -432,19 +437,6 @@ ul ul, ul ol, ol ol, ol ul {
     font-family: 'fontello';
     margin-right: 0.875rem;
     color: #0aaca9; }
-
-/* Blockquote */
-blockquote {
-  font-size: 120%;
-  line-height: 1.6;
-  font-style: italic;
-  padding: 0 0 0 30px;
-  padding: 0 0 0 1.875rem;
-  border-left: 2px solid #0aaca9; }
-
-cite {
-  display: block;
-  font-size: 75%; }
 
 /* Spacing */
 p {
@@ -616,7 +608,7 @@ a, button, input[type="button"], input[type="submit"], input[type="color"], inpu
   text-decoration: none;
   white-space: nowrap;
   background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+  border-radius: 1.0625rem;
   border: 1px solid #20c38a;
   cursor: pointer;
   box-sizing: border-box; }
@@ -624,6 +616,15 @@ a, button, input[type="button"], input[type="submit"], input[type="color"], inpu
     color: #0aaca9;
     border-color: #0aaca9;
     outline: 0; }
+
+.g-btn--red {
+  color: #fff;
+  background-color: #c10458;
+  border-color: #c10458; }
+  .g-btn--red:hover, .g-btn--red:active, .g-btn--red:focus {
+    color: #fff;
+    background-color: #a8034d;
+    border-color: #a8034d; }
 
 .g-styled-btn {
   display: inline-block;
@@ -844,8 +845,8 @@ img.g-img-right {
 
 @font-face {
   font-family: 'fontello';
-  src: url('../fonts/fontello/font/fontello.eot?98047835');
-  src: url('../fonts/fontello/font/fontello.eot?98047835#iefix') format('embedded-opentype'), url('../fonts/fontello/font/fontello.woff?98047835') format('woff'), url('../fonts/fontello/font/fontello.ttf?98047835') format('truetype'), url('../fonts/fontello/font/fontello.svg?98047835#fontello') format('svg');
+  src: url('../fonts/fontello/font/fontello.eot?77257465');
+  src: url('../fonts/fontello/font/fontello.eot?77257465#iefix') format('embedded-opentype'), url('../fonts/fontello/font/fontello.woff?77257465') format('woff'), url('../fonts/fontello/font/fontello.ttf?77257465') format('truetype'), url('../fonts/fontello/font/fontello.svg?77257465#fontello') format('svg');
   font-weight: normal;
   font-style: normal; }
 
@@ -855,7 +856,7 @@ img.g-img-right {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?98047835#fontello') format('svg');
+    src: url('../font/fontello.svg?77257465#fontello') format('svg');
   }
 }
 */
@@ -914,6 +915,10 @@ img.g-img-right {
   content: '\e806'; }
 
 /* '' */
+.icon-map:before {
+  content: '\e807'; }
+
+/* '' */
 /*Scroll-up button start*/
 .scroll-up-btn {
   width: 3.125rem;

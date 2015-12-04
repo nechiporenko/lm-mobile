@@ -7,7 +7,7 @@
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-
+    <!--<link href="css_common/app.css" rel="stylesheet" />-->
     <link href="css_common/main.css" rel="stylesheet" />
     <link href="css_common/header.css" rel="stylesheet" />
     <link href="css_common/menu.css" rel="stylesheet" />
@@ -54,7 +54,7 @@
                 </div><!--/g-col-->
                 <div class="g-col g-col--one-half g-col--xs g-text-right">
                     <a href="tel:+77272221144" class="call-link">+7 727 222 11 44</a>
-                    <button type="button" class="g-btn" data-modal="#callback">Бесплатный звонок</button>
+                    <button type="button" class="g-btn g-btn--red" data-modal="#callback">Бесплатный звонок</button>
                 </div><!--/g-col-->
             </div><!--/g-container-->
         </div><!--/header__content-->
@@ -85,6 +85,9 @@
                 </div><!--/g-as-table-->
                 <div class="g-text-center">
                     <button type="button" class="g-styled-btn" data-modal="#order">Заказать консультацию</button>
+                    <div>
+                        <small>*Заказать консультацию специалиста и получить скидку 20%</small>
+                    </div>
                 </div>
             </article><!--/g-container-->
         </div><!--/page__section-->
@@ -229,6 +232,9 @@
                 </ul>
                 <div class="g-text-center">
                     <button type="button" class="g-styled-btn" data-modal="#order">Заказать консультацию</button>
+                    <div>
+                        <small>*Заказать консультацию специалиста и получить скидку 20%</small>
+                    </div>
                 </div>
             </article>
         </div><!--/page__section-->
@@ -278,10 +284,58 @@
                     <button type="button" class="g-styled-btn b-promo__btn" data-modal="#order">Отправить заявку</button>
                 </p>
                 <p>или получите консультацию по телефону</p>
-                <a href="tel:+77272221144" class="b-promo__tel">+ 7 727 222 11 44</a>
+                <a href="tel:+77272221144" class="g-styled-btn b-promo__btn"><i class="icon-mobile"></i>+ 7 727 222 11 44</a>
             </div><!--/g-container-->
         </div><!--/b-promo-->
         <!--/БЛОК "АКЦИЯ"-->
+        <!--СИМПТОМЫ-->
+        <div class="page__section">
+            <article class="g-container">
+                <h3 class="g-title">Лактомарин используют для борьбы с симптомами</h3>
+                <div class="g-as-table">
+                    <div class="g-as-cell">
+                        <ol class="g-styled-ol-list">
+                            <li>Острые и ноющие боли в области сердца</li>
+                            <li><b>Учащенное сердцебиение</b></li>
+                            <li>Сердечную недостаточность и одышку</li>
+                            <li>Отеки нижних конечностей</li>
+                            <li>Цианоз (кожа приобретает синеватый оттенок)</li>
+                            <li><b>Общую слабость и головокружение</b></li>
+                            <li>Повышенную утомляемость и периодическую возбудимость</li>
+                        </ol>
+                    </div><!--/g-as-cell-->
+                    <div class="g-as-cell g-text-center">
+                        <img src="img_common/loader.gif" data-src="img/hands.jpg" class="g-max-full-width" alt="Product" />
+                        <noscript>
+                            <img src="img/hands.jpg" class="g-max-full-width" alt="Product" />
+                        </noscript>
+                    </div><!--/g-as-cell-->
+                </div><!--/g-as-table-->
+                <hr class="alt" />
+                <h4 class="g-title">
+                    Если у Вас присутствует хоть один симптом,<br />
+                    Лактомарин именно для Вас!
+                </h4>
+            </article>
+        </div><!--/page__section-->
+        <!--/СИМПТОМЫ-->
+        <!--БЛОК УСПЕЙТЕ ЗАКАЗАТЬ СО СКИДКОЙ-->
+        <div class="b-action">
+            <div class="g-container">
+                <div class="g-col g-col--one-half g-col--one-half-center">
+                    <form class="b-action__form">
+                        <span class="b-action__title">Успейте заказать со скидкой</span>
+                        <p class="b-action__subtitle">Введите Ваше имя и номер телефона и получите скидку 20%</p>
+                        <label class="g-visuallyhidden">Ваше имя</label>
+                        <input type="text" class="g-input" placeholder="Ваше имя" />
+                        <label class="g-visuallyhidden">Ваш телефон</label>
+                        <input type="text" class="g-input" placeholder="Ваш телефон" data-phone />
+                        <button type="submit" class="g-styled-btn g-full-width">Получить скидку 20%</button>
+                    </form>
+                </div><!--/g-col-->
+            </div><!--/g-container-->
+        </div><!--/b-action-->
+        <!--/БЛОК УСПЕЙТЕ ЗАКАЗАТЬ СО СКИДКОЙ-->
         <!--СОСТАВ-->
         <div class="page__section page__section--alt">
             <article class="g-container">
@@ -341,43 +395,13 @@
             </article><!--/g-container-->
         </div><!--/page__section-->
         <!--/СОСТАВ-->
-        <!--СИМПТОМЫ-->
-        <div class="page__section">
-            <article class="g-container">
-                <h3 class="g-title">Лактомарин используют для борьбы с симптомами</h3>
-                <div class="g-as-table">
-                    <div class="g-as-cell">
-                        <ol class="g-styled-ol-list">
-                            <li>Острые и ноющие боли в области сердца</li>
-                            <li><b>Учащенное сердцебиение</b></li>
-                            <li>Сердечную недостаточность и одышку</li>
-                            <li>Отеки нижних конечностей</li>
-                            <li>Цианоз (кожа приобретает синеватый оттенок)</li>
-                            <li><b>Общую слабость и головокружение</b></li>
-                            <li>Повышенную утомляемость и периодическую возбудимость</li>
-                        </ol>
-                    </div><!--/g-as-cell-->
-                    <div class="g-as-cell g-text-center">
-                        <img src="img_common/loader.gif" data-src="img/hands.jpg" class="g-max-full-width" alt="Product" />
-                        <noscript>
-                            <img src="img/hands.jpg" class="g-max-full-width" alt="Product" />
-                        </noscript>
-                    </div><!--/g-as-cell-->
-                </div><!--/g-as-table-->
-                <hr class="alt" />
-                <h4 class="g-title">
-                    Если у Вас присутствует хоть один симптом,<br />
-                    Лактомарин именно для Вас!
-                </h4>
-            </article>
-        </div><!--/page__section-->
-        <!--/СИМПТОМЫ-->
+        
     </div><!--/#section3-->
 
 
     <div id="section4">
         <!--ОТЗЫВЫ-->
-        <div class="page__section page__section--alt">
+        <div class="page__section">
             <article class="g-container">
                 <h3 class="g-title">Отзывы наших клиентов</h3>
                 <div class="b-review">
@@ -398,6 +422,7 @@
                         <iframe width="560" height="315" src="https://www.youtube.com/embed/AUt9_uM7WXc" allowfullscreen></iframe>
                     </div>
                 </div><!--/b-review-->
+                <hr class="alt" />
                 <div class="g-text-center">
                     <button type="button" class="g-styled-btn">Больше отзывов</button>
                 </div>
@@ -447,7 +472,7 @@
                     <button type="button" class="g-styled-btn b-promo__btn" data-modal="#order">Отправить заявку</button>
                 </p>
                 <p>или получите консультацию по телефону</p>
-                <a href="tel:+77272221144" class="b-promo__tel">+ 7 727 222 11 44</a>
+                <a href="tel:+77272221144" class="g-styled-btn b-promo__btn"><i class="icon-mobile"></i>+ 7 727 222 11 44</a>
             </div><!--/g-container-->
         </div><!--/b-promo-->
         <!--/БЛОК "АКЦИЯ"-->
@@ -463,6 +488,11 @@
                     ул. Ауэзова, 111
                 </p>
                 <p class="g-text-center"><span class="g-brand-color"><i class="icon-mobile"></i></span>  +7 727 222-11-44</p>
+                <p class="g-text-center">
+                    <a href="#" target="_blank" class="g-link-unstyled">
+                        <span class="g-brand-color"><i class="icon-map"></i></span> Открыть карту
+                    </a>
+                </p>
             </article>
         </div><!--/page__section-->
         <div class="page__section">
@@ -487,7 +517,7 @@
                 </div><!--/g-col-->
                 <div class="g-col g-col--one-half g-col--xs g-text-right">
                     <a href="tel:+77272221144" class="call-link">+7 727 222 11 44</a>
-                    <button type="button" class="g-btn" data-modal="#callback">Бесплатный звонок</button>
+                    <button type="button" class="g-btn g-btn--red" data-modal="#callback">Бесплатный звонок</button>
                 </div><!--/g-col-->
             </div><!--/g-row-->
             <div class="g-text-center">

@@ -82,7 +82,7 @@
 }
 
 .countdown__num--sec{
-    color:#c10458;
+    color:$primary-action;
 }
 .countdown__title{
     @include font-size(11px);

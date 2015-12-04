@@ -1,0 +1,45 @@
+﻿@import "../../modules/_base.scss";
+/*--СОСТАВ*/
+.composition{
+    list-style-type:none;
+    padding:0;
+    margin:rem(24px) 0;
+    @include clearfix;
+}
+.composition__item{
+    float:left;
+    min-height:1px;
+    width:100%;
+    text-align:center;
+    @include font-size(14px);
+
+    @include media($tablet){
+        @include span-columns(6);
+        @include omega(2n);
+    }
+}
+
+.composition__item--last{
+    @include media($tablet){
+        float:none;
+        width:50%;
+        margin-left:auto;
+        margin-right:auto !important;
+    }
+}
+
+.composition__thumb{
+    padding:0;
+    text-align:center;
+}
+.composition__img{
+    border-radius:50%;
+    margin-bottom:rem(12);
+}
+.composition__title{
+    margin-bottom:rem(24px);
+    @include font-size(24px);
+    line-height:1.1;
+    color:$primary;
+}
+/*--/СОСТАВ*/

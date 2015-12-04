@@ -1,5 +1,13 @@
 @import "../modules/base";
-
+/*---тсреп*/
 .footer{
-   
+   padding:rem(24px) 0;
+   background:#fafafa;
 }
+.footer__link{
+    @include font-size(11px);
+    color:$text-color;
+    text-decoration:none;
+    white-space:nowrap;
+}
+/*---/тсреп*/

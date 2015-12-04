@@ -82,10 +82,11 @@
 .page__section{
     padding:rem(24px) 0;
     background:#fff;
+    border-bottom:1px solid $border-color;
 }
 .page__section--alt{
     background:#fafafa;
-    border-bottom:1px solid $border-color;
+    //border-bottom:1px solid $border-color;
 }
 
 

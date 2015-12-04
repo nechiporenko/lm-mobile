@@ -7,13 +7,17 @@
     <meta name="description" content="Page Description">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, maximum-scale=1">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <!--<link rel="stylesheet" href="css_common/app.css">-->
+
     <link href="css_common/main.css" rel="stylesheet" />
     <link href="css_common/header.css" rel="stylesheet" />
     <link href="css_common/menu.css" rel="stylesheet" />
-    <link href="css/action-block.css" rel="stylesheet" />
-    <link href="css/features-block.css" rel="stylesheet" />
+    <link href="css_common/action-block.css" rel="stylesheet" />
     <link href="css_common/promo.css" rel="stylesheet" />
+    <link href="css_common/footer.css" rel="stylesheet" />
+
+    <link href="css/features-block.css" rel="stylesheet" />
+    <link href="css/composition.css" rel="stylesheet" />
+    <link href="css/review.css" rel="stylesheet" />
 </head>
 <body class="page">
     <!--ФИКСИРОВАННЫЙ ХИДЕР-->
@@ -80,7 +84,7 @@
                     </div><!--/g-as-cell-->
                 </div><!--/g-as-table-->
                 <div class="g-text-center">
-                    <button type="button" class="g-styled-btn">Заказать консультацию</button>
+                    <button type="button" class="g-styled-btn" data-modal="#order">Заказать консультацию</button>
                 </div>
             </article><!--/g-container-->
         </div><!--/page__section-->
@@ -224,7 +228,7 @@
                     </li>
                 </ul>
                 <div class="g-text-center">
-                    <button type="button" class="g-styled-btn">Заказать консультацию</button>
+                    <button type="button" class="g-styled-btn" data-modal="#order">Заказать консультацию</button>
                 </div>
             </article>
         </div><!--/page__section-->
@@ -238,7 +242,8 @@
                 <span class="b-promo__title">
                     До завершения акции:
                 </span>
-                <ul class="countdown js-countdown" data-timer="12/07/2015"><!--mm/dd/yyyy-->
+                <ul class="countdown js-countdown" data-timer="12/07/2015">
+                    <!--mm/dd/yyyy-->
                     <li class="countdown__item">
                         <div class="countdown__inner">
                             <span class="countdown__num countdown__num--day">00</span>
@@ -263,33 +268,234 @@
                         </div>
                         <span class="countdown__title">секунд</span>
                     </li>
-                </ul>                
+                </ul>
                 <span class="b-promo__subtitle">
                     Успейте заказать Лактомарин<br />
                     со скидкой 20%<br />
                     прямо сейчас!
                 </span>
                 <p>
-                    <button type="button" class="g-styled-btn b-promo__btn">Отправить заявку</button>
+                    <button type="button" class="g-styled-btn b-promo__btn" data-modal="#order">Отправить заявку</button>
                 </p>
                 <p>или получите консультацию по телефону</p>
                 <a href="tel:+77272221144" class="b-promo__tel">+ 7 727 222 11 44</a>
             </div><!--/g-container-->
         </div><!--/b-promo-->
         <!--/БЛОК "АКЦИЯ"-->
-
-        <div class="page__section">
+        <!--СОСТАВ-->
+        <div class="page__section page__section--alt">
             <article class="g-container">
-                <header>
-                    <h2 class="g-title">Состав</h2>
-                </header>
+                <h3 class="g-title">Состав</h3>
+                <ul class="composition">
+                    <li class="composition__item">
+                        <figure class="composition__thumb">
+                            <img src="img_common/loader.gif" data-src="img/comp01.png" class="composition__img" alt="Composition" />
+                            <noscript>
+                                <img src="img/comp01.png" class="composition__img" alt="Composition" />
+                            </noscript>
+                            <figcaption class="composition__title">Альгинаты</figcaption>
+                        </figure>
+                        <p>Ценный водорослевый полисахарид, оказывающий благотворное влияние на состояние желудочно-кишечного тракта и способствующий восстановлению его работы.</p>
+                    </li>
+                    <li class="composition__item">
+                        <figure class="composition__thumb">
+                            <img src="img_common/loader.gif" data-src="img/comp02.png" class="composition__img" alt="Composition" />
+                            <noscript>
+                                <img src="img/comp02.png" class="composition__img" alt="Composition" />
+                            </noscript>
+                            <figcaption class="composition__title">Фукоидан</figcaption>
+                        </figure>
+                        <p>Водорослевый полисахарид с высокой биологической активностью, обладающий уникальными противоопухолевыми, антитоксическими, противовирусными и иммуностимулирующими свойствами.</p>
+                    </li>
+                    <li class="composition__item">
+                        <figure class="composition__thumb">
+                            <img src="img_common/loader.gif" data-src="img/comp04.png" class="composition__img" alt="Composition" />
+                            <noscript>
+                                <img src="img/comp04.png" class="composition__img" alt="Composition" />
+                            </noscript>
+                            <figcaption class="composition__title">Органический йод</figcaption>
+                        </figure>
+                        <p>Незаменимый компонент образования гормонов щитовидной железы, принимающий участие в обменных процессах в организме, а также активно воздействующий на физическое и психическое развитие человека.</p>
+                    </li>
+                    <li class="composition__item">
+                        <figure class="composition__thumb">
+                            <img src="img_common/loader.gif" data-src="img/comp05.png" class="composition__img" alt="Composition" />
+                            <noscript>
+                                <img src="img/comp05.png" class="composition__img" alt="Composition" />
+                            </noscript>
+                            <figcaption class="composition__title">Ламинарий</figcaption>
+                        </figure>
+                        <p>Ценный водорослевый полисахарид, оказывающий благотворное влияние на состояние желудочно-кишечного тракта и способствующий восстановлению его работы.</p>
+                    </li>
+                    <li class="composition__item composition__item--last">
+                        <figure class="composition__thumb">
+                            <img src="img_common/loader.gif" data-src="img/comp03.png" class="composition__img" alt="Composition" />
+                            <noscript>
+                                <img src="img/comp03.png" class="composition__img" alt="Composition" />
+                            </noscript>
+                            <figcaption class="composition__title">Витамины, микро- и макроэлементы</figcaption>
+                        </figure>
+                        <p>Комплекс активных химико-биологических соединений, включающий около 40 микро- и макроэлементов, витамины, аминокислоты, полисахариды и другие ценные компоненты водорослевого слоевища, необходимые человеку для полноценной жизнедеятельности.</p>
+                    </li>
+                </ul>
             </article><!--/g-container-->
         </div><!--/page__section-->
+        <!--/СОСТАВ-->
+        <!--СИМПТОМЫ-->
+        <div class="page__section">
+            <article class="g-container">
+                <h3 class="g-title">Лактомарин используют для борьбы с симптомами</h3>
+                <div class="g-as-table">
+                    <div class="g-as-cell">
+                        <ol class="g-styled-ol-list">
+                            <li>Острые и ноющие боли в области сердца</li>
+                            <li><b>Учащенное сердцебиение</b></li>
+                            <li>Сердечную недостаточность и одышку</li>
+                            <li>Отеки нижних конечностей</li>
+                            <li>Цианоз (кожа приобретает синеватый оттенок)</li>
+                            <li><b>Общую слабость и головокружение</b></li>
+                            <li>Повышенную утомляемость и периодическую возбудимость</li>
+                        </ol>
+                    </div><!--/g-as-cell-->
+                    <div class="g-as-cell g-text-center">
+                        <img src="img_common/loader.gif" data-src="img/hands.jpg" class="g-max-full-width" alt="Product" />
+                        <noscript>
+                            <img src="img/hands.jpg" class="g-max-full-width" alt="Product" />
+                        </noscript>
+                    </div><!--/g-as-cell-->
+                </div><!--/g-as-table-->
+                <hr class="alt" />
+                <h4 class="g-title">
+                    Если у Вас присутствует хоть один симптом,<br />
+                    Лактомарин именно для Вас!
+                </h4>
+            </article>
+        </div><!--/page__section-->
+        <!--/СИМПТОМЫ-->
     </div><!--/#section3-->
 
 
-    <div id="section4"></div><!--/#section4-->
-    <div id="section5"></div><!--/#section5-->
+    <div id="section4">
+        <!--ОТЗЫВЫ-->
+        <div class="page__section page__section--alt">
+            <article class="g-container">
+                <h3 class="g-title">Отзывы наших клиентов</h3>
+                <div class="b-review">
+                    <figure class="b-review__thumb">
+                        <img src="img_common/loader.gif" data-src="img/user.png" class="b-review__img" alt="User" />
+                        <figcaption class="b-review__title">
+                            Хамитбекова София
+                            <span class="b-review__subtitle">
+                                58-де<br />
+                                87757496105
+                            </span>
+                        </figcaption>
+                    </figure>
+                    <p><strong>“Қазір қант диабеті де жақсы болды, 12-ден 4,6-ға дейін түсті.”</strong></p>
+                    <p>Мен Қостанай облысы, Рудный қаласында жасаймын. Емімім-София, фамилиям-Хамитбекова. Мен 2008 жылы инсульт алдым, жүректен ишемия болып, одан қан қысымым көтеріліп, содан сахар да қосылды оған. Больницада жаттым 1,5 айдай. Сол лактомарин өнімін есітіп, 1 курсын алдым. Содан кейін 2 ай демалып, екінші курсын тағы алдым. 2014 жылы екінші инсульт алғанмын. Қазір енді екінші курс емделуін өтеп жатырмын. Әлі 2 айы бар, қалған 3 айын ішіп бітірдім. Қазір қант диабеті де жақсы болды, 12-ден 4,6-ға дейін түсті. Одан жүрегімнің шаншығаны, қатты соғып кетуі де басылды. Қан қысымым көп көтерілмейді, қалпына түсті, тұрақты. 280-мен құлап инсульт алған едім ғой, қазір 150-ге дейін ғана анда-санда көтеріледі. Құрметті қазақ радиосының тыңдаушылары, қазақстандықтар осы лактомарин өнімін пайдаланып, ауырмаңыздар деймін!</p>
+
+                    <div class="g-video-wrap">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/AUt9_uM7WXc" allowfullscreen></iframe>
+                    </div>
+                </div><!--/b-review-->
+                <div class="g-text-center">
+                    <button type="button" class="g-styled-btn">Больше отзывов</button>
+                </div>
+
+            </article>
+        </div><!--/page__section-->
+        <!--/ОТЗЫВЫ-->
+        <!--БЛОК "АКЦИЯ"-->
+        <div class="b-promo">
+            <div class="g-container">
+                <span class="b-promo__title">
+                    До завершения акции:
+                </span>
+                <ul class="countdown js-countdown">
+                    <!--mm/dd/yyyy-->
+                    <li class="countdown__item">
+                        <div class="countdown__inner">
+                            <span class="countdown__num countdown__num--day">00</span>
+                        </div>
+                        <span class="countdown__title">дней</span>
+                    </li>
+                    <li class="countdown__item">
+                        <div class="countdown__inner">
+                            <span class="countdown__num countdown__num--hour">00</span>
+                        </div>
+                        <span class="countdown__title">часов</span>
+                    </li>
+                    <li class="countdown__item">
+                        <div class="countdown__inner">
+                            <span class="countdown__num countdown__num--min">00</span>
+                        </div>
+                        <span class="countdown__title">минут</span>
+                    </li>
+                    <li class="countdown__item">
+                        <div class="countdown__inner">
+                            <span class="countdown__num countdown__num--sec">00</span>
+                        </div>
+                        <span class="countdown__title">секунд</span>
+                    </li>
+                </ul>
+                <span class="b-promo__subtitle">
+                    Успейте заказать Лактомарин<br />
+                    со скидкой 20%<br />
+                    прямо сейчас!
+                </span>
+                <p>
+                    <button type="button" class="g-styled-btn b-promo__btn" data-modal="#order">Отправить заявку</button>
+                </p>
+                <p>или получите консультацию по телефону</p>
+                <a href="tel:+77272221144" class="b-promo__tel">+ 7 727 222 11 44</a>
+            </div><!--/g-container-->
+        </div><!--/b-promo-->
+        <!--/БЛОК "АКЦИЯ"-->
+    </div><!--/#section4-->
+    <div id="section5">
+        <!--КОНТАКТЫ-->
+        <div class="page__section page__section--alt">
+            <article class="g-container">
+                <h3 class="g-title">Контакты компании</h3>
+                <p class="g-text-center">
+                    <span class="g-brand-color"><i class="icon-location"></i></span>Республика Казахстан<br />
+                    г.Алматы<br />
+                    ул. Ауэзова, 111
+                </p>
+                <p class="g-text-center"><span class="g-brand-color"><i class="icon-mobile"></i></span>  +7 727 222-11-44</p>
+            </article>
+        </div><!--/page__section-->
+        <div class="page__section">
+            <div class="g-container">
+                <div class="g-title">Остались вопросы?</div>
+                <hr class="alt" />
+                <div class="g-text-center">
+                    <button type="button" class="g-styled-btn" data-modal="#order">Задать вопрос специалисту</button>
+                </div>
+            </div>
+        </div><!--/page__section-->
+        <!--/КОНТАКТЫ-->
+    </div><!--/#section5-->
+
+    <footer class="footer">
+        <div class="g-container">
+            <div class="g-row">
+                <div class="g-col g-col--one-half g-col--xs">
+                    <a href="/" class="logo">Лактомарин</a>
+                    <span class="logo__title">Гель из бурых морских водорослей</span>
+                    <span class="logo__subtitle">100% натуральный продукт</span>
+                </div><!--/g-col-->
+                <div class="g-col g-col--one-half g-col--xs g-text-right">
+                    <a href="tel:+77272221144" class="call-link">+7 727 222 11 44</a>
+                    <button type="button" class="g-btn" data-modal="#callback">Бесплатный звонок</button>
+                </div><!--/g-col-->
+            </div><!--/g-row-->
+            <div class="g-text-center">
+                <a href="#" class="footer__link"><i class="icon-desktop"></i> Перейти на десктоп-версию</a>
+            </div>
+        </div><!--/g-container-->
+    </footer>
+
     <!--МОДАЛЬНОЕ ОКНО КОЛЛБЭК-->
     <div class="modal" id="callback">
         <form class="modal__content">
@@ -303,10 +509,58 @@
         </form>
     </div><!--/modal-->
     <!--/МОДАЛЬНОЕ ОКНО КОЛЛБЭК-->
+    <!--МОДАЛЬНОЕ ОКНО ОТПРАВИТЬ ЗАЯВКУ-->
+    <div class="modal" id="order">
+        <form class="modal__content">
+            <span class="g-title">Укажите Ваше имя и номер телефона</span>
+            <p class="g-subtitle">и получите скидку 20% на Лактомарин</p>
+            <label class="g-visuallyhidden">Ваше имя</label>
+            <input type="text" class="g-input" placeholder="Ваше имя" />
+            <label class="g-visuallyhidden">Ваш телефон</label>
+            <input type="text" class="g-input" placeholder="Ваш телефон" data-phone />
+            <button type="submit" class="g-styled-btn g-full-width">Отправить</button>
+        </form>
+    </div><!--/modal-->
+    <!--/МОДАЛЬНОЕ ОКНО ОТПРАВИТЬ ЗАЯВКУ-->
+    <!--МОДАЛЬНОЕ ОКНО ОТПРАВКА ДАННЫХ-->
+    <div class="modal" id="send-data">
+        <div class="modal__content">
+            <span class="g-title">Мы отправляем Вашу заявку</span>
+            <p class="g-subtitle">подождите немного...</p>
+            <div class="g-text-center">
+                <img src="img_common/loader.gif" alt="Loader" />
+            </div>
+        </div>
+    </div><!--/modal-->
+    <!--/МОДАЛЬНОЕ ОКНО ОТПРАВКА ДАННЫХ-->
+    <!--МОДАЛЬНОЕ ОКНО СПАСИБО ЗА ЗАЯВКУ-->
+    <div class="modal" id="sent-ok">
+        <div class="modal__content">
+            <span class="g-title">Спасибо!</span>
+            <p class="g-subtitle">Ваша заявка отправлена</p>
+            <div class="g-text-center">
+                В ближайшее время менеджер свяжется с Вами
+            </div>
+        </div>
+    </div><!--/modal-->
+    <!--/МОДАЛЬНОЕ ОКНО СПАСИБО ЗА ЗАЯВКУ-->
+    <!--МОДАЛЬНОЕ ОКНО ОШИБКИ-->
+    <div class="modal" id="sent-bad">
+        <div class="modal__content">
+            <span class="g-title">Произошла ошибка</span>
+            <p class="g-subtitle">Мы приносим свои извинения</p>
+            <div class="g-text-center">
+                Попробуйте повторить немного позже, или перезвоните нам<br />
+                <b>+ 7 727 222 11 44</b>
+            </div>
+        </div>
+    </div><!--/modal-->
+    <!--/МОДАЛЬНОЕ ОКНО ОШИБКИ-->
 
+    <div id="overlay"></div>
     <script src="js/vendor/modernizr.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-    <script src="js/app.js"></script>
+    <script src="js/app.min.js"></script>
 </body>
 </html>

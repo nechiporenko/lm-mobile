@@ -1,0 +1,24 @@
+﻿@import "../../modules/_base.scss";
+/*---ОТЗЫВЫ*/
+.b-review{
+    //@include font-size(14px);
+    line-height:1.3;
+}
+.b-review__thumb{
+    text-align:center;
+    padding:0;
+}
+.b-review__img{
+    margin-bottom:rem(12px);
+    border-radius:50%;
+}
+.b-review__title{
+    font-weight:bold;
+    @include font-size(16px);
+}
+.b-review__subtitle{
+    display:block;
+    line-height:1.2;
+    font-weight:normal;
+}
+/*---/ОТЗЫВЫ*/

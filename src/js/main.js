@@ -63,15 +63,13 @@ jQuery(document).ready(function ($) {
     var showModal = (function (link) {
         var
         method = {},
-        $overlay,
+        $overlay = $('#overlay'),
         $modal,
         $close;
 
         // добавим в документ
-        $overlay = $('<div id="overlay"></div>'); //оверлей
         $close = $('<a class="modal__close" href="#"><i class="icon-cancel"></i></a>'); //иконка закрыть
 
-        $body.append($overlay);
 
         $close.on('click', function (e) {
             e.preventDefault();
@@ -97,9 +95,9 @@ jQuery(document).ready(function ($) {
             $modal = $(link);
             $modal.append($close);
             method.center();
-            $window.bind('resize.modal', method.center);
-            $modal.fadeIn();
-            $overlay.fadeIn();
+            $window.bind('resize.modal', method.center);            
+            $overlay.show();
+            $modal.show();
 
             $overlay.bind('click', function () {
                 method.close();
@@ -108,7 +106,7 @@ jQuery(document).ready(function ($) {
 
         // закрываем
         method.close = function () {
-            $modal.fadeOut('fast');
+            $modal.hide();
             $overlay.fadeOut('fast', function () {
                 $window.unbind('resize.modal');
             });

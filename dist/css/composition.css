@@ -1,0 +1,52 @@
+﻿/*--СОСТАВ*/
+.composition {
+  list-style-type: none;
+  padding: 0;
+  margin: 1.5rem 0; }
+  .composition::after {
+    clear: both;
+    content: "";
+    display: table; }
+
+.composition__item {
+  float: left;
+  min-height: 1px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  font-size: 0.875rem; }
+  @media screen and (min-width: 40em)  {
+    .composition__item {
+      float: left;
+      display: block;
+      margin-right: 2.3576515979%;
+      width: 48.821174201%; }
+      .composition__item:last-child {
+        margin-right: 0; }
+      .composition__item:nth-child(2n) {
+        margin-right: 0; }
+      .composition__item:nth-child(2n+1) {
+        clear: left; } }
+
+@media screen and (min-width: 40em)  {
+  .composition__item--last {
+    float: none;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto !important; } }
+
+.composition__thumb {
+  padding: 0;
+  text-align: center; }
+
+.composition__img {
+  border-radius: 50%;
+  margin-bottom: 0.75rem; }
+
+.composition__title {
+  margin-bottom: 1.5rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1.1;
+  color: #0aaca9; }
+/*--/СОСТАВ*/

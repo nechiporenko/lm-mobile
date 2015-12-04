@@ -185,6 +185,10 @@ hr {
     border-top: 1px solid $border-color;
 }
 
+hr.alt{
+    border-top:none;
+}
+
 /* Transitions */
 a, button, input[type="button"], input[type="submit"],
 #{$all-text-inputs}, select{
